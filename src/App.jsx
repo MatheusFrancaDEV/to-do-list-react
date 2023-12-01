@@ -24,7 +24,22 @@ function App() {
   return (
     <>
       <div className="app">
-        
+        <h1>TO - DO List</h1>
+        <div className="todo-list">
+          {todos.map((todos) => (
+            <div className="to-do">
+              <div className="content">
+                <p>{todos.text}</p>
+                <span className="category">
+                  ({todos.category})
+                </span>
+                <div className="btn-group">
+                  
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
       </div>
     </>
   )
