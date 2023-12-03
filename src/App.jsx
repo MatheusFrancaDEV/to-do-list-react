@@ -1,4 +1,5 @@
 import { useState } from "react"
+import { Button, CssBaseline } from "@mui/material"
 
 function App() {
   const [todos, setTodos] = useState([
@@ -23,6 +24,7 @@ function App() {
   ])
   return (
     <>
+    <CssBaseline>
       <div className="app">
         <h1>TO - DO List</h1>
         <div className="todo-list">
@@ -34,13 +36,15 @@ function App() {
                   ({todos.category})
                 </span>
                 <div className="btn-group">
-                  
+                    <Button variant="contained" color="success">Completar</Button>
+                    <Button variant="contained" color="error">X</Button>
                 </div>
               </div>
             </div>
           ))}
         </div>
       </div>
+      </CssBaseline>
     </>
   )
 }
